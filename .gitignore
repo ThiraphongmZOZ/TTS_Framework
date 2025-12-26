@@ -19,6 +19,8 @@ venv\
 !/data/stations_600.json
 /data/hf_cache/
 /data/test_results/
+!/data/stations_600.json
+!/data/reference.wav
 
 # Logs
 *.log
