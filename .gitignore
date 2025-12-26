@@ -14,14 +14,12 @@ venv/
 venv\
 
 # Data and model caches (do NOT commit bulky model files)
-/data/
-/data/*
-!/data/stations_600.json
-/data/hf_cache/
-/data/test_results/
+!/data/
 !/data/stations_600.json
 !/data/reference.wav
 
+/data/hf_cache/
+/data/test_results/
 # Logs
 *.log
 
