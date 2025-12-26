@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.env
+.env.*
+.env.local
+
+# Virtual Envs
+venv/
+.venv/
+venv\
+
+# Data and model caches (do NOT commit bulky model files)
+/data/
+/data/*
+!/data/stations_600.json
+/data/hf_cache/
+/data/test_results/
+
+# Logs
+*.log
+
+# VSCode
+.vscode/
+
+# Mac
+.DS_Store
+
+# Docker
+docker-compose.override.yml
+
+# Temporary
+*.tmp
+*.temp
+
+# Ignore model snapshots if accidentally present
+**/snapshots/
+**/blobs/

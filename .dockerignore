@@ -1,0 +1,20 @@
+โฟลเดอร์ data เรา Map volume เอา ไม่ต้อง Copy เข้า Image ให้หนัก
+
+data/
+
+ไฟล์ขยะ Python
+
+pycache/
+*.pyc
+
+ไฟล์ Git
+
+.git
+
+โฟลเดอร์ Output เก่า (ถ้ามี)
+
+og_output/
+
+ไฟล์ชั่วคราว
+
+temp_*

@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+jinja2
+numpy
+soundfile
+pythainlp
+f5-tts-th
+scipy
+librosa

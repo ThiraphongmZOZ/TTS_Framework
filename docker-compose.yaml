@@ -1,0 +1,27 @@
+# docker-compose.yaml
+
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: thai_f5_tts_container
+    ports:
+      - "8000:8000"
+    volumes:
+      # Map โฟลเดอร์ data ออกมาที่เครื่องเรา เพื่อให้เราแก้ไฟล์ Dictionary หรือเปลี่ยนไฟล์ Reference.wav ได้ง่ายๆ
+      - ./data:/app/data
+      # Map โฟลเดอร์ templates ออกมา เผื่อคุณอยากแก้หน้าเว็บ UI HTML โดยไม่ต้อง Build ใหม่
+      - ./templates:/app/templates
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+    # --- ส่วนตั้งค่า GPU (ถ้าเครื่องคุณมีการ์ดจอ NVIDIA และลง Nvidia Docker ไว้ ให้เอา Comment ออก) ---
+    deploy:
+       resources:
+         reservations:
+           devices:
+             - driver: nvidia
+               count: 1
+               capabilities: [gpu]
